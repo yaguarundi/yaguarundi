@@ -1,154 +1,140 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaguarundi</title>
-    <style>
-        body {
-            background-color: #815232;
-            color: #E0CBB9;
-            font-family: "Helvetica", Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* --- THE NEW NAVIGATION MENU CSS --- */
-        .nav-menu {
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .nav-menu a {
-            color: #E0CBB9;
-            margin: 0 15px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        .nav-menu a:hover {
-            text-decoration: underline;
-        }
-        hr.nav-divider {
-            border: none;
-            border-top: 2px solid #3A2414;
-            width: 80%;
-            margin: 0 auto 40px auto;
-        }
-
-        p {
-            text-align: justify;
-            margin-bottom: 20px;
-        }
-
-        .img-left {
-            float: left;
-            margin: 5px 20px 15px 0;
-            max-width: 300px;
-            border-radius: 8px;
-            border: 2px solid #3A2414;
-        }
-
-
-        .img-right {
-            float: right;
-            margin: 5px 20px 15px 0;
-            width: 300px;
-            border-radius: 8px;
-            border: 2px solid #3A2414;
-        }
-
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px; 
-        }
-
-        .linktree-icon {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: #E0CBB9;
-            mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
-            -webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
-            transition: opacity 0.3s ease;
-        }
-
-        .linktree-icon:hover {
-            opacity: 0.7; 
-        }
-
-        @media (max-width: 768px) {
-            .img-left, .gif-container {
-                float: none;
-                display: block;
-                margin: 0 auto 20px auto;
-                width: 100%;
-                max-width: 400px;
-            }
-
-            h1 {
-                font-size: 2em;
-                margin-bottom: 20px;
-            }
-
-            body {
-                padding: 20px 15px; 
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaguarundi</title>
+<style>
+body {
+background-color: #815232;
+color: #E0CBB9;
+font-family: "Helvetica", Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 40px 20px;
+}
+.container {
+max-width: 900px;
+margin: 0 auto;
+}
+h1 {
+text-align: center;
+font-size: 2.5em;
+margin-bottom: 30px;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+.nav-menu {
+text-align: center;
+margin-bottom: 20px;
+font-weight: bold;
+font-size: 1.2em;
+}
+.nav-menu a {
+color: #E0CBB9;
+margin: 0 15px;
+text-decoration: none;
+text-transform: uppercase;
+}
+.nav-menu a:hover {
+text-decoration: underline;
+}
+hr.nav-divider {
+border: none;
+border-top: 2px solid #3A2414;
+width: 80%;
+margin: 0 auto 40px auto;
+}
+p {
+text-align: justify;
+margin-bottom: 20px;
+}
+.img-left {
+float: left;
+margin: 5px 20px 15px 0;
+max-width: 300px;
+border-radius: 8px;
+border: 2px solid #3A2414;
+}
+.img-right {
+float: right;
+margin: 5px 0 15px 20px;
+max-width: 300px; 
+border-radius: 8px;
+border: 2px solid #3A2414;
+}
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+.footer {
+text-align: center;
+margin-top: 60px;
+padding-top: 30px; 
+}
+.linktree-icon {
+display: inline-block;
+width: 40px;
+height: 40px;
+background-color: #E0CBB9;
+mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
+-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
+transition: opacity 0.3s ease;
+}
+.linktree-icon:hover {
+opacity: 0.7; 
+}
+@media (max-width: 768px) {
+.img-left, .img-right { 
+float: none;
+display: block;
+margin: 0 auto 20px auto;
+width: 100%;
+max-width: 400px;
+}
+h1 {
+font-size: 2em;
+margin-bottom: 20px;
+}
+body {
+padding: 20px 15px; 
+}
+}
+</style>
 </head>
 <body>
 
-    <div class="nav-menu">
-        <a href="/">Inici</a>
-        <a href="/fotos/">Fotos</a>
-    </div>
-    <hr class="nav-divider">
+<div class="nav-menu">
+<a href="/">Inici</a>
+<a href="/fotos/">Fotos</a>
+</div>
+<hr class="nav-divider">
 
-    <div class="container clearfix">
-        <h1>Sobre els Jaguarundis</h1>
+<div class="container clearfix">
+<h1>Sobre els Jaguarundis</h1>
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Puma_yagouaroundi.jpg" alt="Un jaguarundi en llibertat" class="img-left">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Puma_yagouaroundi.jpg" alt="Un jaguarundi en llibertat" class="img-left">
 
-        <p>El jaguarundi (<i>Herpailurus yagouaroundi</i>), també conegut com a gat llúdriga, és una espècie de fèlid de mida petita a mitjana que es troba des del sud de Texas fins al centre de l'Argentina. A diferència d'altres felins del continent americà, el jaguarundi té un aspecte molt peculiar que sovint fa que es confongui amb una llúdriga o una marta. Té un cos allargat, potes curtes, un cap petit i aplanat, i unes orelles arrodonides. El seu pelatge no té taques ni ratlles en la seva etapa adulta, presentant-se en dues fases de color principals: una fase grisa fosca o negra, i una fase vermellosa o castanya. Aquesta variabilitat va fer que antigament es pensés que eren dues espècies diferents.</p>
+<p>El jaguarundi (<i>Herpailurus yagouaroundi</i>), també conegut com a gat llúdriga, és una espècie de fèlid de mida petita a mitjana que es troba des del sud de Texas fins al centre de l'Argentina. A diferència d'altres felins del continent americà, el jaguarundi té un aspecte molt peculiar que sovint fa que es confongui amb una llúdriga o una marta. Té un cos allargat, potes curtes, un cap petit i aplanat, i unes orelles arrodonides. El seu pelatge no té taques ni ratlles en la seva etapa adulta, presentant-se en dues fases de color principals: una fase grisa fosca o negra, i una fase vermellosa o castanya. Aquesta variabilitat va fer que antigament es pensés que eren dues espècies diferents.</p>
 
-        <p>Aquest felí és predominantment diürn, la qual cosa el diferencia de molts dels seus parents més propers, com l'ocelot o el margay, que són estrictament nocturns. Prefereixen habitar en zones de matoll dens, vores de boscos i sabanes on poden trobar refugi fàcilment. Són animals molt àgils i excel·lents escaladors, tot i que passen la major part del temps caçant a terra. La seva dieta és carnívora i bastant variada; s'alimenten principalment de petits mamífers, ocells, rèptils i, de vegades, de peixos o granotes que atrapen als rierols. Malgrat la seva aparença inusual, són caçadors letals i molt adaptables.</p>
+<p>Aquest felí és predominantment diürn, la qual cosa el diferencia de molts dels seus parents més propers, com l'ocelot o el margay, que són estrictament nocturns. Prefereixen habitar en zones de matoll dens, vores de boscos i sabanes on poden trobar refugi fàcilment. Són animals molt àgils i excel·lents escaladors, tot i que passen la major part del temps caçant a terra. La seva dieta és carnívora i bastant variada; s'alimenten principalment de petits mamífers, ocells, rèptils i, de vegades, de peixos o granotes que atrapen als rierols. Malgrat la seva aparença inusual, són caçadors letals i molt adaptables.</p>
 
-        <img src="Jag goes mew.gif" alt="Un jaguarundi en llibertat" class="img-right">
+<img src="Jag goes mew.gif" alt="Un jaguarundi en llibertat" class="img-right">
 
-        <p>Pel que fa al seu estat de conservació, el jaguarundi està catalogat com a espècie en "Risc Mínim" a nivell global per la UICN, a causa de la seva àmplia distribució geogràfica. Tot i això, algunes poblacions locals, especialment al sud dels Estats Units i al nord de Mèxic, estan greument amenaçades per la pèrdua d'hàbitat causada per l'expansió agrícola i el desenvolupament humà. La meva missió és donar a conèixer aquest bell i poc conegut felí salvatge, per tal de promoure la seva protecció i garantir que continuï vagant pels boscos i les sabanes d'Amèrica durant moltes generacions més.</p>
+<p>Pel que fa al seu estat de conservació, el jaguarundi està catalogat com a espècie en "Risc Mínim" a nivell global per la UICN, a causa de la seva àmplia distribució geogràfica. Tot i això, algunes poblacions locals, especialment al sud dels Estats Units i al nord de Mèxic, estan greument amenaçades per la pèrdua d'hàbitat causada per l'expansió agrícola i el desenvolupament humà. La meva missió és donar a conèixer aquest bell i poc conegut felí salvatge, per tal de promoure la seva protecció i garantir que continuï vagant pels boscos i les sabanes d'Amèrica durant moltes generacions més.</p>
 
-    </div>
+</div>
 
-    <div class="footer">
-        <a href="https://linktr.ee/yaguarundi" target="_blank" rel="noopener noreferrer" title="Links.">
-            <span class="linktree-icon"></span>
-        </a>
-    </div>
+<div class="footer">
+<a href="https://linktr.ee/yaguarundi" target="_blank" rel="noopener noreferrer" title="Links.">
+<span class="linktree-icon"></span>
+</a>
+</div>
 
 </body>
 </html>
+
 
 
 
