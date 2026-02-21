@@ -63,7 +63,7 @@ gap: 30px;
 display: flex;
 flex-direction: column;
 }
-.photo-item a {
+.photo-item > a {
 display: block;
 width: 100%;
 }
@@ -75,6 +75,7 @@ border-radius: 8px;
 border: 2px solid #3A2414;
 transition: transform 0.3s ease;
 cursor: zoom-in;
+box-sizing: border-box;
 }
 .photo-item img:hover {
 transform: scale(1.08); 
@@ -110,7 +111,7 @@ opacity: 0.7;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 15px 20px;
+padding: 15px 15px;
 }
 .hamburger {
 display: flex;
@@ -399,4 +400,3 @@ Colorado State University Libraries té llicència
 
 </body>
 </html>
-
