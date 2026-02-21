@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inici | Yaguarundi</title>
+    <title>Inici – yaguarundi.cat</title>
     <style>
         body {
             background-color: #815232;
@@ -27,10 +27,7 @@
             letter-spacing: 2px;
         }
 
-        p {
-            text-align: justify;
-            margin-bottom: 20px;
-        }
+        /* --- THE NEW NAVIGATION MENU CSS --- */
         .nav-menu {
             text-align: center;
             margin-bottom: 20px;
@@ -52,6 +49,12 @@
             width: 80%;
             margin: 0 auto 40px auto;
         }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
         .img-left {
             float: left;
             margin: 5px 20px 15px 0;
@@ -59,33 +62,23 @@
             border-radius: 8px;
             border: 2px solid #3A2414;
         }
-        
-           .img-right {
+
+        .gif-container {
             float: right;
             margin: 5px 0 15px 20px;
             max-width: 300px;
-            border-radius: 8px;
-            border: 2px solid #3A2414;
-        }
-
-        /* Container to center both the text and the GIF together */
-        .gif-container {
             text-align: center;
-            margin: 40px auto 20px auto; 
-            width: fit-content;
         }
 
         .gif-text {
-            font-size: 2.2em; /* Larger than paragraphs, smaller than the H1 */
+            font-size: 2.2em; 
             font-weight: bold;
-            color: #6a2f0d;
+            color: #E0CBB9; 
             margin: 0 0 5px 0;
         }
 
-        /* The GIF styling */
-        .img-center {
-            display: block;
-            max-width: 100%;
+        .gif-image {
+            width: 100%;
             border-radius: 8px;
             border: 2px solid #3A2414;
         }
@@ -94,8 +87,8 @@
             content: "";
             clear: both;
             display: table;
-            
         }
+
         .footer {
             text-align: center;
             margin-top: 60px;
@@ -109,16 +102,15 @@
             background-color: #E0CBB9;
             mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
             -webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
-            
             transition: opacity 0.3s ease;
         }
 
         .linktree-icon:hover {
             opacity: 0.7; 
         }
+
         @media (max-width: 768px) {
-            
-            .img-left, .img-right {
+            .img-left, .gif-container {
                 float: none;
                 display: block;
                 margin: 0 auto 20px auto;
@@ -138,9 +130,10 @@
     </style>
 </head>
 <body>
+
     <div class="nav-menu">
         <a href="index.html">Inici</a>
-        <a href="gallery.html">Fotos [Construcció en aquest moment]</a>
+        <a href="gallery.html">Fotos</a>
     </div>
     <hr class="nav-divider">
 
@@ -153,32 +146,20 @@
 
         <p>Aquest felí és predominantment diürn, la qual cosa el diferencia de molts dels seus parents més propers, com l'ocelot o el margay, que són estrictament nocturns. Prefereixen habitar en zones de matoll dens, vores de boscos i sabanes on poden trobar refugi fàcilment. Són animals molt àgils i excel·lents escaladors, tot i que passen la major part del temps caçant a terra. La seva dieta és carnívora i bastant variada; s'alimenten principalment de petits mamífers, ocells, rèptils i, de vegades, de peixos o granotes que atrapen als rierols. Malgrat la seva aparença inusual, són caçadors letals i molt adaptables.</p>
 
-        <img src="Jag goes mew.gif" alt="Un jaguarundi en llibertat" class="img-right">
+        <div class="gif-container">
+            <p class="gif-text">Mew!</p>
+            <img src="Jag goes mew.gif" alt="Un jaguarundi en llibertat" class="gif-image">
+        </div>
 
         <p>Pel que fa al seu estat de conservació, el jaguarundi està catalogat com a espècie en "Risc Mínim" a nivell global per la UICN, a causa de la seva àmplia distribució geogràfica. Tot i això, algunes poblacions locals, especialment al sud dels Estats Units i al nord de Mèxic, estan greument amenaçades per la pèrdua d'hàbitat causada per l'expansió agrícola i el desenvolupament humà. La meva missió és donar a conèixer aquest bell i poc conegut felí salvatge, per tal de promoure la seva protecció i garantir que continuï vagant pels boscos i les sabanes d'Amèrica durant moltes generacions més.</p>
 
     </div>
 
-
-<div class="footer">
-            <a href="https://linktr.ee/yaguarundi" target="_blank" rel="noopener noreferrer" title="Links.">
-                <span class="linktree-icon"></span>
-            </a>
-        </div>
+    <div class="footer">
+        <a href="https://linktr.ee/yaguarundi" target="_blank" rel="noopener noreferrer" title="Links.">
+            <span class="linktree-icon"></span>
+        </a>
+    </div>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
