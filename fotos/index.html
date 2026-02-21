@@ -24,26 +24,35 @@ margin-bottom: 30px;
 text-transform: uppercase;
 letter-spacing: 2px;
 }
-.nav-menu {
+.navbar {
+position: sticky;
+top: 0;
+background-color: #815232; /* Matches the page to cover scrolling images */
+z-index: 1000; /* Keeps it on top of everything */
 text-align: center;
-margin-bottom: 20px;
-font-weight: bold;
-font-size: 1.2em;
+padding: 15px 0;
+border-bottom: 2px solid #3A2414;
+margin-bottom: 30px;
 }
-.nav-menu a {
+.nav-links {
+display: block; /* Shown normally on desktop */
+}
+.nav-links a {
 color: #E0CBB9;
 margin: 0 15px;
 text-decoration: none;
 text-transform: uppercase;
+font-weight: bold;
+font-size: 1.2em;
 }
-.nav-menu a:hover {
+.nav-links a:hover {
 text-decoration: underline;
 }
-hr.nav-divider {
-border: none;
-border-top: 2px solid #3A2414;
-width: 80%;
-margin: 0 auto 40px auto;
+.hamburger {
+display: none; /* Hidden on desktop */
+font-size: 2em;
+cursor: pointer;
+color: #E0CBB9;
 }
 .photo-grid {
 display: grid;
@@ -93,19 +102,45 @@ transition: opacity 0.3s ease;
 opacity: 0.7; 
 }
 @media (max-width: 768px) {
-.photo-grid {
-grid-template-columns: 1fr;
-}
-}
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                padding-top: 15px;
+            }
+            .nav-links a {
+                margin: 10px 0;
+                display: block;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
 </style>
 </head>
 <body>
 
-<div class="nav-menu">
-<a href="/">Inici</a>
-<a href="/fotos/">Fotos</a>
-</div>
-<hr class="nav-divider">
+<div class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        
+        <div class="nav-links" id="mobile-menu">
+            <a href="/">Inici</a>
+            <a href="/fotos/">Fotos</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobile-menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
 
 <div class="container">
 <h1>Fotos de Jaguarundis</h1>
@@ -340,6 +375,7 @@ Colorado State University Libraries té llicència
 
 </body>
 </html>
+
 
 
 
