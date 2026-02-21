@@ -1,355 +1,342 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotos | Yaguarundi</title>
-    <style>
-        body {
-            background-color: #815232;
-            color: #E0CBB9;
-            font-family: "Helvetica", Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* The Navigation Menu */
-        .nav-menu {
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .nav-menu a {
-            color: #E0CBB9;
-            margin: 0 15px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        .nav-menu a:hover {
-            text-decoration: underline;
-        }
-        hr.nav-divider {
-            border: none;
-            border-top: 2px solid #3A2414;
-            width: 80%;
-            margin: 0 auto 40px auto;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; 
-            gap: 30px;
-        }
-
-        .photo-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .photo-item img {
-            width: 100%;
-            aspect-ratio: 3 / 2; 
-            object-fit: cover; 
-            border-radius: 8px;
-            border: 2px solid #3A2414;
-            transition: transform 0.3s ease;
-            cursor: zoom-in;
-        }
-
-        .photo-item img:hover {
-            transform: scale(1.08); 
-        }
-
-        /* The CC Attribution Text */
-        .caption {
-            font-size: 0.85em;
-            text-align: center;
-            margin-top: 10px;
-            line-height: 1.4;
-        }
-        .caption a {
-            color: #E0CBB9; 
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px; 
-        }
-
-        .linktree-icon {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: #E0CBB9;
-            mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
-            -webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
-            transition: opacity 0.3s ease;
-        }
-
-        .linktree-icon:hover {
-            opacity: 0.7; 
-        }
-        @media (max-width: 768px) {
-            .photo-grid {
-                grid-template-columns: 1fr; /* Stacks to 1 column on cell phones */
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fotos | Yaguarundi</title>
+<style>
+body {
+background-color: #815232;
+color: #E0CBB9;
+font-family: "Helvetica", Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 40px 20px;
+}
+.container {
+max-width: 1000px;
+margin: 0 auto;
+}
+h1 {
+text-align: center;
+font-size: 2.5em;
+margin-bottom: 30px;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+.nav-menu {
+text-align: center;
+margin-bottom: 20px;
+font-weight: bold;
+font-size: 1.2em;
+}
+.nav-menu a {
+color: #E0CBB9;
+margin: 0 15px;
+text-decoration: none;
+text-transform: uppercase;
+}
+.nav-menu a:hover {
+text-decoration: underline;
+}
+hr.nav-divider {
+border: none;
+border-top: 2px solid #3A2414;
+width: 80%;
+margin: 0 auto 40px auto;
+}
+.photo-grid {
+display: grid;
+grid-template-columns: 1fr 1fr; 
+gap: 30px;
+}
+.photo-item {
+display: flex;
+flex-direction: column;
+}
+.photo-item img {
+width: 100%;
+aspect-ratio: 3 / 2; 
+object-fit: cover; 
+border-radius: 8px;
+border: 2px solid #3A2414;
+transition: transform 0.3s ease;
+cursor: zoom-in;
+}
+.photo-item img:hover {
+transform: scale(1.08); 
+}
+.caption {
+font-size: 0.85em;
+text-align: center;
+margin-top: 10px;
+line-height: 1.4;
+}
+.caption a {
+color: #E0CBB9; 
+}
+.footer {
+text-align: center;
+margin-top: 60px;
+padding-top: 30px; 
+}
+.linktree-icon {
+display: inline-block;
+width: 40px;
+height: 40px;
+background-color: #E0CBB9;
+mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
+-webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
+transition: opacity 0.3s ease;
+}
+.linktree-icon:hover {
+opacity: 0.7; 
+}
+@media (max-width: 768px) {
+.photo-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
 <body>
 
-    <div class="nav-menu">
-        <a href="/">Inici</a>
-        <a href="/fotos/">Fotos</a>
-    </div>
-    <hr class="nav-divider">
+<div class="nav-menu">
+<a href="/">Inici</a>
+<a href="/fotos/">Fotos</a>
+</div>
+<hr class="nav-divider">
 
-    <div class="container">
-        <h1>Fotos de Jaguarundis</h1>
-        
-        <div class="photo-grid">
-            
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%201.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%201.jpg" alt="Jaguarundi 1">
-                </a>
-                <p class="caption">
-                    "<a href="https://commons.wikimedia.org/wiki/File:Puma_yagouaroundi_Pont-Scorff_Zoo_17082015_1.jpg" target="_blank">Puma yagouaroundi Pont-Scorff Zoo 17082015 1</a>" de 
-                    <a href="https://commons.wikimedia.org/wiki/User:Vassil" target="_blank">Vassil</a> està alliberada sota
-                    <a href="https://creativecommons.org/public-domain/cc0/" target="_blank">domini públic (CC0)</a>.
-                </p>
-            </div>
+<div class="container">
+<h1>Fotos de Jaguarundis</h1>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%202.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%202.jpg" alt="Jaguarundi sitting on ground near water">
-                </a>
-                <p class="caption">
-                    "<a href="https://archives.mountainscholar.org/digital/collection/p17393coll48/id/809" target="_blank">Jaguarundi sitting on ground near water</a>" de 
-                    Colorado State University Libraries té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
-                </p>
-            </div>
+<div class="photo-grid">
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%203.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%203.jpg" alt="Jaguarundi Zoo Berlin">
-                </a>
-                <p class="caption">
-                    "<a href="https://commons.wikimedia.org/wiki/File:Jaguarundi_Zoo_Berlin.JPG" target="_blank">Jaguarundi Zoo Berlin</a>" de 
-                    <a href="https://commons.wikimedia.org/wiki/User:UrLunkwill" target="_blank">UrLunkwill</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en" target="_blank">CC BY-SA 3.0 DE</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%201.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%201.jpg" alt="Jaguarundi 1">
+</a>
+<p class="caption">
+"<a href="https://commons.wikimedia.org/wiki/File:Puma_yagouaroundi_Pont-Scorff_Zoo_17082015_1.jpg" target="_blank">Puma yagouaroundi Pont-Scorff Zoo 17082015 1</a>" de 
+<a href="https://commons.wikimedia.org/wiki/User:Vassil" target="_blank">Vassil</a> està alliberada sota
+<a href="https://creativecommons.org/public-domain/cc0/" target="_blank">domini públic (CC0)</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%204.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%204.jpg" alt="Lovy, la onza">
-                </a>
-                <p class="caption">
-                    "<a href="https://commons.wikimedia.org/wiki/File:Lovy,_la_onza_(Herpailurus_yagouaroundi)_en_Zool%C3%B3gico_Paraguan%C3%A1.jpg" target="_blank">Lovy, la onza (Herpailurus yagouaroundi) en Zoológico Paraguaná</a>" de 
-                    <a href="https://commons.wikimedia.org/wiki/User:Aramburu_Carlos" target="_blank">Aramburu Carlos</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%202.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%202.jpg" alt="Jaguarundi sitting on ground near water">
+</a>
+<p class="caption">
+"<a href="https://archives.mountainscholar.org/digital/collection/p17393coll48/id/809" target="_blank">Jaguarundi sitting on ground near water</a>" de 
+Colorado State University Libraries té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%205.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%205.jpg" alt="Herpailurus yagouaroundi 323451560">
-                </a>
-                <p class="caption">
-                    "<a href="https://www.inaturalist.org/photos/323451560" target="_blank">Herpailurus yagouaroundi 323451560</a>" de 
-                    <a href="https://www.inaturalist.org/people/thibaudaronson" target="_blank">Thibaud Aronson</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%203.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%203.jpg" alt="Jaguarundi Zoo Berlin">
+</a>
+<p class="caption">
+"<a href="https://commons.wikimedia.org/wiki/File:Jaguarundi_Zoo_Berlin.JPG" target="_blank">Jaguarundi Zoo Berlin</a>" de 
+<a href="https://commons.wikimedia.org/wiki/User:UrLunkwill" target="_blank">UrLunkwill</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en" target="_blank">CC BY-SA 3.0 DE</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%206.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%206.jpg" alt="Herpailurus yagouaroundi 323451602">
-                </a>
-                <p class="caption">
-                    "<a href="https://www.inaturalist.org/photos/323451602" target="_blank">Herpailurus yagouaroundi 323451602</a>" de 
-                    <a href="https://www.inaturalist.org/people/thibaudaronson" target="_blank">Thibaud Aronson</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%204.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%204.jpg" alt="Lovy, la onza">
+</a>
+<p class="caption">
+"<a href="https://commons.wikimedia.org/wiki/File:Lovy,_la_onza_(Herpailurus_yagouaroundi)_en_Zool%C3%B3gico_Paraguan%C3%A1.jpg" target="_blank">Lovy, la onza (Herpailurus yagouaroundi) en Zoológico Paraguaná</a>" de 
+<a href="https://commons.wikimedia.org/wiki/User:Aramburu_Carlos" target="_blank">Aramburu Carlos</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%207.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%207.jpg" alt="IMG_7783">
-                </a>
-                <p class="caption">
-                    "<a href="https://flic.kr/p/d4kURE" target="_blank">IMG_7783</a>" de 
-                    <a href="https://www.inaturalist.org/users/772325" target="_blank">brianfagan</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%205.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%205.jpg" alt="Herpailurus yagouaroundi 323451560">
+</a>
+<p class="caption">
+"<a href="https://www.inaturalist.org/photos/323451560" target="_blank">Herpailurus yagouaroundi 323451560</a>" de 
+<a href="https://www.inaturalist.org/people/thibaudaronson" target="_blank">Thibaud Aronson</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%208.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%208.jpg" alt="jaguarundi kitten">
-                </a>
-                <p class="caption">
-                    "<a href="https://flic.kr/p/5NT21z" target="_blank">jaguarundi (Puma yagouaroundi) kitten</a>" de 
-                    <a href="https://www.flickr.com/photos/ken_mayer/" target="_blank">Ken Mayer</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%206.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%206.jpg" alt="Herpailurus yagouaroundi 323451602">
+</a>
+<p class="caption">
+"<a href="https://www.inaturalist.org/photos/323451602" target="_blank">Herpailurus yagouaroundi 323451602</a>" de 
+<a href="https://www.inaturalist.org/people/thibaudaronson" target="_blank">Thibaud Aronson</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%209.jpeg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%209.jpeg" alt="Herpailurus yagouaroundi 308737058">
-                </a>
-                <p class="caption">
-                    "<a href="https://www.inaturalist.org/photos/308737058" target="_blank">Herpailurus yagouaroundi 308737058</a>" de 
-                    <a href="https://www.inaturalist.org/people/adeilsonmelo" target="_blank">Adeilson Melo</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%207.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%207.jpg" alt="IMG_7783">
+</a>
+<p class="caption">
+"<a href="https://flic.kr/p/d4kURE" target="_blank">IMG_7783</a>" de 
+<a href="https://www.inaturalist.org/users/772325" target="_blank">brianfagan</a> té llicència 
+<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2010.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2010.jpg" alt="Jaguarundi">
-                </a>
-                <p class="caption">
-                    "<a href="https://flic.kr/p/af8RyQ" target="_blank">Jaguarundi (Puma yagouaroundi)</a>" de 
-                    <a href="https://www.flickr.com/photos/fabiomanfredini/" target="_blank">Fábio Manfredini</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%208.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%208.jpg" alt="jaguarundi kitten">
+</a>
+<p class="caption">
+"<a href="https://flic.kr/p/5NT21z" target="_blank">jaguarundi (Puma yagouaroundi) kitten</a>" de 
+<a href="https://www.flickr.com/photos/ken_mayer/" target="_blank">Ken Mayer</a> té llicència 
+<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2011.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2011.jpg" alt="Jaguarundi">
-                </a>
-                <p class="caption">
-                    "<a href="https://flic.kr/p/94PKc8" target="_blank">Jaguarundi</a>" de 
-                    <a href="https://www.flickr.com/photos/quinet/" target="_blank">Thomas Quine</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%209.jpeg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%209.jpeg" alt="Herpailurus yagouaroundi 308737058">
+</a>
+<p class="caption">
+"<a href="https://www.inaturalist.org/photos/308737058" target="_blank">Herpailurus yagouaroundi 308737058</a>" de 
+<a href="https://www.inaturalist.org/people/adeilsonmelo" target="_blank">Adeilson Melo</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2012.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2012.jpg" alt="Jaguarundi seitlich">
-                </a>
-                <p class="caption">
-                    "<a href="https://commons.wikimedia.org/wiki/File:Jaguarundi_seitlich.jpg" target="_blank">Jaguarundi seitlich</a>" de 
-                    <a href="https://de.wikipedia.org/wiki/User:JaKoMo" target="_blank">JaKoMo</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2010.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2010.jpg" alt="Jaguarundi">
+</a>
+<p class="caption">
+"<a href="https://flic.kr/p/af8RyQ" target="_blank">Jaguarundi (Puma yagouaroundi)</a>" de 
+<a href="https://www.flickr.com/photos/fabiomanfredini/" target="_blank">Fábio Manfredini</a> té llicència 
+<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2013.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2013.jpg" alt="Puma yaguarondi">
-                </a>
-                <p class="caption">
-                    "<a href="https://commons.wikimedia.org/wiki/File:Puma_yaguarondi.jpg" target="_blank">Puma yaguarondi</a>" de 
-                    <a href="https://commons.wikimedia.org/w/index.php?title=User:Bodlina~commonswiki&action=edit&redlink=1" target="_blank">Bodlina</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2011.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2011.jpg" alt="Jaguarundi">
+</a>
+<p class="caption">
+"<a href="https://flic.kr/p/94PKc8" target="_blank">Jaguarundi</a>" de 
+<a href="https://www.flickr.com/photos/quinet/" target="_blank">Thomas Quine</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC BY-SA 2.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2014.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2014.jpg" alt="Herpailurus yagouaroundi 310267736">
-                </a>
-                <p class="caption">
-                    "<a href="https://www.inaturalist.org/photos/310267736" target="_blank">Herpailurus yagouaroundi 310267736</a>" de 
-                    <a href="https://www.inaturalist.org/people/benjobson" target="_blank">Ben Jobson</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2012.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2012.jpg" alt="Jaguarundi seitlich">
+</a>
+<p class="caption">
+"<a href="https://commons.wikimedia.org/wiki/File:Jaguarundi_seitlich.jpg" target="_blank">Jaguarundi seitlich</a>" de 
+<a href="https://de.wikipedia.org/wiki/User:JaKoMo" target="_blank">JaKoMo</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2015.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2015.jpg" alt="Jaguarundi kittens">
-                </a>
-                <p class="caption">
-                    "<a href="https://flic.kr/p/ajhJEj" target="_blank">Jaguarundi kittens</a>" de 
-                    <a href="https://flickr.com/photos/15016964@N02/" target="_blank">Marie Hale</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by/2.0/deed.en" target="_blank">CC BY 2.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2013.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2013.jpg" alt="Puma yaguarondi">
+</a>
+<p class="caption">
+"<a href="https://commons.wikimedia.org/wiki/File:Puma_yaguarondi.jpg" target="_blank">Puma yaguarondi</a>" de 
+<a href="https://commons.wikimedia.org/w/index.php?title=User:Bodlina~commonswiki&action=edit&redlink=1" target="_blank">Bodlina</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2016.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2016.jpg" alt="Jaguarondi 1">
-                </a>
-                <p class="caption">
-                    "<a href="https://commons.wikimedia.org/wiki/File:Jaguarondi_1.jpg" target="_blank">Jaguarondi 1</a>" de 
-                    <a href="https://commons.wikimedia.org/wiki/User:C%C3%A9dricGravelle" target="_blank">Cédric Gravelle</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2014.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2014.jpg" alt="Herpailurus yagouaroundi 310267736">
+</a>
+<p class="caption">
+"<a href="https://www.inaturalist.org/photos/310267736" target="_blank">Herpailurus yagouaroundi 310267736</a>" de 
+<a href="https://www.inaturalist.org/people/benjobson" target="_blank">Ben Jobson</a> té llicència 
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2017.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2017.jpg" alt="Zoo Ostrava, jaguarundi, jaro 2009">
-                </a>
-                <p class="caption">
-                    "<a href="https://commons.wikimedia.org/wiki/File:Zoo_Ostrava,_jaguarundi,_jaro_2009.jpg" target="_blank">Zoo Ostrava, jaguarundi, jaro 2009</a>" de 
-                    <a href="https://commons.wikimedia.org/wiki/User:Ragimiri" target="_blank">Lukáš Mižoch</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2015.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2015.jpg" alt="Jaguarundi kittens">
+</a>
+<p class="caption">
+"<a href="https://flic.kr/p/ajhJEj" target="_blank">Jaguarundi kittens</a>" de 
+<a href="https://flickr.com/photos/15016964@N02/" target="_blank">Marie Hale</a> té llicència 
+<a href="https://creativecommons.org/licenses/by/2.0/deed.en" target="_blank">CC BY 2.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2018.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2018.jpg" alt="Herpailurus yagouaroundi Jaguarundi ZOO Děčín">
-                </a>
-                <p class="caption">
-                    "<a href="https://commons.wikimedia.org/wiki/File:Herpailurus_yagouaroundi_Jaguarundi_ZOO_D%C4%9B%C4%8D%C3%ADn.jpg" target="_blank">Herpailurus yagouaroundi Jaguarundi ZOO Děčín</a>" de Alena Houšková té llicència 
-                    <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2016.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2016.jpg" alt="Jaguarondi 1">
+</a>
+<p class="caption">
+"<a href="https://commons.wikimedia.org/wiki/File:Jaguarondi_1.jpg" target="_blank">Jaguarondi 1</a>" de 
+<a href="https://commons.wikimedia.org/wiki/User:C%C3%A9dricGravelle" target="_blank">Cédric Gravelle</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2019.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2019.jpg" alt="Herpailurus yagouaroundi 220133134">
-                </a>
-                <p class="caption">
-                    "<a href="https://www.inaturalist.org/photos/220133134" target="_blank">Herpailurus yagouaroundi 220133134</a>" de <a href="https://www.inaturalist.org/people/igor117" target="_blank">Igor Balashov</a> té llicència 
-                    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2017.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2017.jpg" alt="Zoo Ostrava, jaguarundi, jaro 2009">
+</a>
+<p class="caption">
+"<a href="https://commons.wikimedia.org/wiki/File:Zoo_Ostrava,_jaguarundi,_jaro_2009.jpg" target="_blank">Zoo Ostrava, jaguarundi, jaro 2009</a>" de 
+<a href="https://commons.wikimedia.org/wiki/User:Ragimiri" target="_blank">Lukáš Mižoch</a> té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
+</p>
+</div>
 
-            <div class="photo-item">
-                <a href="../images/Jaguarundi%2020.jpg" target="_blank" rel="noopener noreferrer">
-                    <img src="../images/Jaguarundi%2020.jpg" alt="Puma yagouaroundi">
-                </a>
-                <p class="caption">
-                    "<a href="https://commons.wikimedia.org/wiki/File:Puma_yagouaroundi.jpg" target="_blank">Puma yagouaroundi</a>" de <a href="https://commons.wikimedia.org/wiki/User:Vassil" target="_blank">Vassil</a> està alliberada sota
-                    <a href="https://creativecommons.org/public-domain/cc0/" target="_blank">domini públic (CC0)</a>.
-                </p>
-            </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2018.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2018.jpg" alt="Herpailurus yagouaroundi Jaguarundi ZOO Děčín">
+</a>
+<p class="caption">
+"<a href="https://commons.wikimedia.org/wiki/File:Herpailurus_yagouaroundi_Jaguarundi_ZOO_D%C4%9B%C4%8D%C3%ADn.jpg" target="_blank">Herpailurus yagouaroundi Jaguarundi ZOO Děčín</a>" de Alena Houšková té llicència 
+<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank">CC BY-SA 3.0</a>.
+</p>
+</div>
 
-        </div>
-    </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2019.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2019.jpg" alt="Herpailurus yagouaroundi 220133134">
+</a>
+<p class="caption">
+"<a href="https://www.inaturalist.org/photos/220133134" target="_blank">Herpailurus yagouaroundi 220133134</a>" de <a href="https://www.inaturalist.org/people/igor117" target="_blank">Igor Balashov</a> té llicència 
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+</p>
+</div>
 
-    <div class="footer">
-        <a href="https://linktr.ee/yaguarundi" target="_blank" rel="noopener noreferrer" title="Links.">
-            <span class="linktree-icon"></span>
-        </a>
-    </div>
+<div class="photo-item">
+<a href="/images/Jaguarundi%2020.jpg" target="_blank" rel="noopener noreferrer">
+<img src="/images/Jaguarundi%2020.jpg" alt="Puma yagouaroundi">
+</a>
+<p class="caption">
+"<a href="https://commons.wikimedia.org/wiki/File:Puma_yagouaroundi.jpg" target="_blank">Puma yagouaroundi</a>" de <a href="https://commons.wikimedia.org/wiki/User:Vassil" target="_blank">Vassil</a> està alliberada sota
+<a href="https://creativecommons.org/public-domain/cc0/" target="_blank">domini públic (CC0)</a>.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+<a href="https://linktr.ee/yaguarundi" target="_blank" rel="noopener noreferrer" title="Links.">
+<span class="linktree-icon"></span>
+</a>
+</div>
 
 </body>
 </html>
