@@ -1,4 +1,129 @@
-<div class="photo-grid">
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos | yaguarundi.cat</title>
+    <style>
+        body {
+            background-color: #815232;
+            color: #E0CBB9;
+            font-family: "Helvetica", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* The Navigation Menu */
+        .nav-menu {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .nav-menu a {
+            color: #E0CBB9;
+            margin: 0 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+        hr.nav-divider {
+            border: none;
+            border-top: 2px solid #3A2414;
+            width: 80%;
+            margin: 0 auto 40px auto;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px;
+        }
+
+        .photo-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .photo-item img {
+            width: 100%;
+            aspect-ratio: 3 / 2; 
+            object-fit: cover; 
+            border-radius: 8px;
+            border: 2px solid #3A2414;
+            transition: transform 0.3s ease;
+            cursor: zoom-in;
+        }
+
+        .photo-item img:hover {
+            transform: scale(1.08); 
+        }
+
+        /* The CC Attribution Text */
+        .caption {
+            font-size: 0.85em;
+            text-align: center;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+        .caption a {
+            color: #E0CBB9; 
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px; 
+        }
+
+        .linktree-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #E0CBB9;
+            mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
+            -webkit-mask: url('https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linktree.svg') no-repeat center / contain;
+            transition: opacity 0.3s ease;
+        }
+
+        .linktree-icon:hover {
+            opacity: 0.7; 
+        }
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: 1fr; /* Stacks to 1 column on cell phones */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-menu">
+        <a href="/">Inici</a>
+        <a href="/fotos/">Fotos</a>
+    </div>
+    <hr class="nav-divider">
+
+    <div class="container">
+        <h1>Fotos de Jaguarundis</h1>
+        
+        <div class="photo-grid">
             
             <div class="photo-item">
                 <a href="../images/Jaguarundi%201.jpg" target="_blank" rel="noopener noreferrer">
@@ -218,5 +343,15 @@
             </div>
 
         </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://linktr.ee/yaguarundi" target="_blank" rel="noopener noreferrer" title="Links.">
+            <span class="linktree-icon"></span>
+        </a>
+    </div>
+
+</body>
+</html>
 
 
