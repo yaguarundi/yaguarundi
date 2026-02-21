@@ -24,7 +24,6 @@ margin-bottom: 30px;
 text-transform: uppercase;
 letter-spacing: 2px;
 }
-/* --- THE STICKY NAVBAR --- */
 .navbar {
 position: sticky;
 top: 0;
@@ -51,7 +50,7 @@ text-decoration: underline;
 }
 .hamburger {
 display: none; 
-font-size: 2em;
+font-size: 1.8em;
 cursor: pointer;
 color: #E0CBB9;
 }
@@ -105,8 +104,34 @@ transition: opacity 0.3s ease;
 .linktree-icon:hover {
 opacity: 0.7; 
 }
-/* --- MOBILE OPTIMIZATION --- */
 @media (max-width: 768px) {
+.navbar {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 15px 20px;
+}
+.hamburger {
+display: flex;
+width: 45px;
+height: 45px;
+background-color: #5C3A23;
+border: 2px solid #3A2414;
+align-items: center;
+justify-content: center;
+border-radius: 6px;
+}
+.nav-links {
+display: none;
+flex-direction: column;
+width: 100%;
+text-align: center;
+padding-top: 15px;
+}
+.nav-links a {
+margin: 10px 0;
+display: block;
+}
 .img-left, .gif-container {
 float: none;
 display: block;
@@ -120,18 +145,6 @@ margin-bottom: 20px;
 }
 body {
 padding: 20px 15px; 
-}
-.nav-links {
-display: none; 
-flex-direction: column;
-padding-top: 15px;
-}
-.nav-links a {
-margin: 10px 0;
-display: block;
-}
-.hamburger {
-display: block; 
 }
 }
 </style>
