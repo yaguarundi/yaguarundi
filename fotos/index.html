@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fotos | Yaguarundi</title>
+<title>Fotos | yaguarundi.cat</title>
 <style>
 body {
 background-color: #815232;
@@ -27,15 +27,15 @@ letter-spacing: 2px;
 .navbar {
 position: sticky;
 top: 0;
-background-color: #815232; /* Matches the page to cover scrolling images */
-z-index: 1000; /* Keeps it on top of everything */
+background-color: #815232; 
+z-index: 1000; 
 text-align: center;
 padding: 15px 0;
 border-bottom: 2px solid #3A2414;
 margin-bottom: 30px;
 }
 .nav-links {
-display: block; /* Shown normally on desktop */
+display: block; 
 }
 .nav-links a {
 color: #E0CBB9;
@@ -49,8 +49,8 @@ font-size: 1.2em;
 text-decoration: underline;
 }
 .hamburger {
-display: none; /* Hidden on desktop */
-font-size: 2em;
+display: none; 
+font-size: 1.8em;
 cursor: pointer;
 color: #E0CBB9;
 }
@@ -102,45 +102,65 @@ transition: opacity 0.3s ease;
 opacity: 0.7; 
 }
 @media (max-width: 768px) {
-            .photo-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                padding-top: 15px;
-            }
-            .nav-links a {
-                margin: 10px 0;
-                display: block;
-            }
-            .hamburger {
-                display: block;
-            }
-        }
+.navbar {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 15px 20px;
+}
+.hamburger {
+display: flex;
+width: 45px;
+height: 45px;
+background-color: #5C3A23;
+border: 2px solid #3A2414;
+align-items: center;
+justify-content: center;
+border-radius: 6px;
+}
+.nav-links {
+display: none;
+flex-direction: column;
+width: 100%;
+text-align: center;
+padding-top: 15px;
+}
+.nav-links a {
+margin: 10px 0;
+display: block;
+}
+.photo-grid {
+grid-template-columns: 1fr;
+}
+h1 {
+font-size: 2em;
+margin-bottom: 20px;
+}
+body {
+padding: 20px 15px; 
+}
+}
 </style>
 </head>
 <body>
 
 <div class="navbar">
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        
-        <div class="nav-links" id="mobile-menu">
-            <a href="/">Inici</a>
-            <a href="/fotos/">Fotos</a>
-        </div>
-    </div>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("mobile-menu");
-            if (menu.style.display === "flex") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "flex";
-            }
-        }
-    </script>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+<div class="nav-links" id="mobile-menu">
+<a href="/">Inici</a>
+<a href="/fotos/">Fotos</a>
+</div>
+</div>
+<script>
+function toggleMenu() {
+var menu = document.getElementById("mobile-menu");
+if (menu.style.display === "block" || menu.style.display === "flex") {
+menu.style.display = "none";
+} else {
+menu.style.display = "flex";
+}
+}
+</script>
 
 <div class="container">
 <h1>Fotos de Jaguarundis</h1>
@@ -375,7 +395,3 @@ Colorado State University Libraries té llicència
 
 </body>
 </html>
-
-
-
-
