@@ -2,9 +2,12 @@
 <html lang="ca">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <title>Fotos | Yaguarundi</title>
 <style>
+html {
+touch-action: pan-x pan-y;
+}
 body {
 background-color: #815232;
 color: #E0CBB9;
@@ -389,24 +392,14 @@ Colorado State University Libraries té llicència
 </div>
 <script>
 document.addEventListener('touchstart', function(event) {
-if (event.touches.length > 1) {
-event.preventDefault();
-}
-}, { passive: false });
+if (event.touches.length > 1) { event.preventDefault(); }
+}, { passive: false, capture: true });
 document.addEventListener('touchmove', function(event) {
-if (event.touches.length > 1) {
-event.preventDefault();
-}
-}, { passive: false });
-document.addEventListener('gesturestart', function(event) {
-event.preventDefault();
-});
-document.addEventListener('gesturechange', function(event) {
-event.preventDefault();
-});
-document.addEventListener('gestureend', function(event) {
-event.preventDefault();
-});
+if (event.touches.length > 1) { event.preventDefault(); }
+}, { passive: false, capture: true });
+document.addEventListener('gesturestart', function(event) { event.preventDefault(); }, { passive: false, capture: true });
+document.addEventListener('gesturechange', function(event) { event.preventDefault(); }, { passive: false, capture: true });
+document.addEventListener('gestureend', function(event) { event.preventDefault(); }, { passive: false, capture: true });
 var yearText = document.getElementById("current-year");
 if (yearText) {
 yearText.innerText = new Date().getFullYear();
@@ -414,6 +407,7 @@ yearText.innerText = new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
