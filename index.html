@@ -48,6 +48,11 @@ font-size: 1.2em;
 .nav-links a:hover {
 text-decoration: underline;
 }
+.nav-links a.active {
+text-decoration: underline;
+text-underline-offset: 6px;
+text-decoration-thickness: 2px;
+}
 .hamburger {
 display: none; 
 font-size: 1.8em;
@@ -154,7 +159,7 @@ padding: 20px 15px;
 <div class="navbar">
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 <div class="nav-links" id="mobile-menu">
-<a href="/">Inici</a>
+<a href="/" class="active">Inici</a>
 <a href="/fotos/">Fotos</a>
 </div>
 </div>
@@ -201,6 +206,7 @@ menu.style.display = "flex";
 </script>
 </body>
 </html>
+
 
 
 
