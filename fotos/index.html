@@ -397,7 +397,14 @@ Colorado State University Libraries té llicència
 <span class="linktree-icon"></span>
 </a>
 </div>
-
+  <script>
+    document.addEventListener('touchmove', function(event) {
+        if (event.touches.length > 1) {
+            event.preventDefault();
+        }
+    }, { passive: false });
+</script>
 </body>
 </html>
+
 
