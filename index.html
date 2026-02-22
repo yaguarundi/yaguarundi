@@ -116,6 +116,11 @@ transition: opacity 0.3s ease;
 .linktree-icon:hover {
 opacity: 0.7; 
 }
+.copyright {
+font-size: 0.87em;
+opacity: 0.7;
+margin-top: 15px;
+}
 @media (max-width: 768px) {
 .navbar {
 display: flex;
@@ -202,6 +207,7 @@ allowfullscreen>
 <a href="https://linktr.ee/yaguarundi" target="_blank" rel="noopener noreferrer" title="Links.">
 <span class="linktree-icon"></span>
 </a>
+<p class="copyright">&copy; <span id="current-year">2026</span> Yago Yaguarundi. Tots els drets reservats.</p>
 </div>
 <script>
 document.addEventListener('touchstart', function(event) {
@@ -224,8 +230,14 @@ document.addEventListener('gestureend', function(event) {
 event.preventDefault();
 });
 </script>
+<script>var yearText = document.getElementById("current-year");
+if (yearText) {
+yearText.innerText = new Date().getFullYear();
+}
+</script>
 </body>
 </html>
+
 
 
 
