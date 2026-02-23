@@ -75,26 +75,31 @@ max-width: 300px;
 border-radius: 8px;
 border: 2px solid #3A2414;
 }
-.img-right {
+.figure-right {
 float: right;
 margin: 5px 0 15px 20px;
 max-width: 300px;
+width: 100%;
+}
+.img-right {
+width: 100%;
 border-radius: 8px;
-border: 2px solid #3A2414;  
+border: 2px solid #3A2414;
+box-sizing: border-box;
+display: block;
 }
 .caption {
 font-size: 0.85em;
-text-align: right;
-margin-top: 10px;
+text-align: center;
+margin-top: 8px;
 line-height: 1.4;
 }
 .caption a {
 color: #E0CBB9; 
 }
 .video-container {
-float: left;
-margin: 5px 20px 15px 0;
-max-width: 300px;
+margin: 40px auto 20px auto;
+max-width: 500px;
 width: 100%;
 text-align: center;
 }
@@ -172,7 +177,7 @@ padding-top: 15px;
 margin: 10px 0;
 display: block;
 }
-.img-left, .video-container {
+.img-left, .figure-right, .video-container {
 float: none;
 display: block;
 margin: 0 auto 20px auto;
@@ -211,13 +216,17 @@ menu.style.display = "flex";
 <h1>Jaguarundis</h1>
 <img src="/images/Jaguarundi.jpg" alt="Un jaguarundi en llibertat" class="img-left">
 <p>El jaguarundi (<i>Herpailurus yagouaroundi</i>), també conegut com a gat llúdriga, és una espècie de fèlid de mida petita a mitjana que es troba des del sud de Texas fins al centre de l'Argentina. A diferència d'altres felins del continent americà, el jaguarundi té un aspecte molt peculiar que sovint fa que es confongui amb una llúdriga o una marta. Té un cos allargat, potes curtes, un cap petit i aplanat, i unes orelles arrodonides. El seu pelatge no té taques ni ratlles en la seva etapa adulta, presentant-se en dues fases de color principals: una fase grisa fosca o negra, i una fase vermellosa o castanya. Aquesta variabilitat va fer que antigament es pensés que eren dues espècies diferents.</p>
+<div class="figure-right">
 <img src="/images/Jaguarundi_distribution.jpg" alt="distribució dels jaguarundis" class="img-right">
 <p class="caption">
+<strong>Distribució dels jaguarundis</strong><br>
 "<a href="https://commons.wikimedia.org/wiki/File:Jaguarundi_distribution.jpg" target="_blank">Jaguarundi distribution</a>" de
-<a href="https://commons.wikimedia.org/w/index.php?title=User:BhagyaMani&action=edit&redlink=1" target="_blank">BhagyaMani</a>té llicència
+<a href="https://commons.wikimedia.org/w/index.php?title=User:BhagyaMani&action=edit&redlink=1" target="_blank">BhagyaMani</a> té llicència
 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a>.
 </p>
+</div>
 <p>Aquest felí és predominantment diürn, la qual cosa el diferencia de molts dels seus parents més propers, com l'ocelot o el margay, que són estrictament nocturns. Prefereixen habitar en zones de matoll dens, vores de boscos i sabanes on poden trobar refugi fàcilment. Són animals molt àgils i excel·lents escaladors, tot i que passen la major part del temps caçant a terra. La seva dieta és carnívora i bastant variada; s'alimenten principalment de petits mamífers, ocells, rèptils i, de vegades, de peixos o granotes que atrapen als rierols. Malgrat la seva aparença inusual, són caçadors letals i molt adaptables.</p>
+<p>Pel que fa al seu estat de conservació, el jaguarundi està catalogat com a espècie en Risc Mínim a nivell global per la Unió Internacional per a la Conservació de la Natura (UICN), a causa de la seva àmplia distribució geogràfica. Tot i això, algunes poblacions locals, especialment al sud dels Estats Units i al nord de Mèxic, estan greument amenaçades per la pèrdua d'hàbitat causada per l'expansió agrícola i el desenvolupament humà. La meva missió és donar a conèixer aquest bell i poc conegut felí salvatge, per tal de promoure la seva protecció i garantir que continuï vagant pels boscos i les sabanes d'Amèrica durant moltes generacions més.</p>
 <div class="video-container">
 <div class="video-wrapper">
 <iframe 
@@ -230,7 +239,6 @@ allowfullscreen>
 </iframe>
 </div>
 </div>
-<p>Pel que fa al seu estat de conservació, el jaguarundi està catalogat com a espècie en Risc Mínim a nivell global per la Unió Internacional per a la Conservació de la Natura (UICN), a causa de la seva àmplia distribució geogràfica. Tot i això, algunes poblacions locals, especialment al sud dels Estats Units i al nord de Mèxic, estan greument amenaçades per la pèrdua d'hàbitat causada per l'expansió agrícola i el desenvolupament humà. La meva missió és donar a conèixer aquest bell i poc conegut felí salvatge, per tal de promoure la seva protecció i garantir que continuï vagant pels boscos i les sabanes d'Amèrica durant moltes generacions més.</p>
 </div>
 <div class="footer">
 <a href="https://linktr.ee/yaguarundi" target="_blank" rel="noopener noreferrer" title="Links.">
@@ -255,19 +263,3 @@ yearText.innerText = new Date().getFullYear();
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
