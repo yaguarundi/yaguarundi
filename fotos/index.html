@@ -19,7 +19,7 @@ padding: 40px 20px;
 touch-action: pan-x pan-y;
 }
 .container {
-max-width: 1000px;
+max-width: 1600px;
 margin: 0 auto;
 }
 h1 {
@@ -66,7 +66,7 @@ color: #E0CBB9;
 }
 .photo-grid {
 display: grid;
-grid-template-columns: 1fr 1fr 1fr; 
+grid-template-columns: repeat (3, 1fr); 
 gap: 30px;
 }
 .photo-item {
@@ -446,6 +446,7 @@ yearText.innerText = new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
 
