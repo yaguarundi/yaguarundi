@@ -96,9 +96,16 @@ vertical-align: middle;
 margin-left: 3px;
 margin-top: 6px;
 border: none;
+display: inline-block;
+transition: transform 0.3s ease;
 }
-@media (hover: hover) {
-.photo-item img:hover {
+@media (hover: hover) and (pointer: fine) {
+.cc-badge:hover {
+transform: scale(1.2); 
+}
+}
+@media (hover: hover) and (pointer: fine) {
+.photo-item > a > img:hover {
 transform: scale(1.08); 
 }
 }
@@ -647,5 +654,6 @@ yearText.innerText = new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
