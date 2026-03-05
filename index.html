@@ -331,17 +331,13 @@ if (yearText) {
 yearText.innerText = new Date().getFullYear();
 }
 var swapWords = document.querySelectorAll('.word-swap');
-swapWords.forEach(function(word) {
-word.addEventListener('click', function() {
-this.classList.toggle('tapped');
+swapWords.forEach(function(clickedWord) {
+clickedWord.addEventListener('click', function() {
+swapWords.forEach(function(everyWord) {
+everyWord.classList.toggle('tapped');
+});      
 });
 });
 </script>
 </body>
 </html>
-
-
-
-
-
-
