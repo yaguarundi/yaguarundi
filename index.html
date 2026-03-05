@@ -67,6 +67,13 @@ p {
 text-align: justify;
 margin-bottom: 20px;
 }
+.word-swap {
+text-decoration: underline dotted; 
+cursor: help; 
+}
+.word-hover {
+display: none; 
+}
 .img-left {
 float: left;
 margin: 5px 25px 15px 0;
@@ -99,6 +106,12 @@ color: #E0CBB9;
 text-decoration: none;
 } 
 @media (hover: hover) and (pointer: fine) {
+.word-swap:hover .word-base {
+display: none; 
+}
+.word-swap:hover .word-hover {
+display: inline; 
+}
 .lk:hover {
 text-decoration: underline;
 }
@@ -265,9 +278,9 @@ menu.style.display = "flex";
 }
 </script>
 <div class="container clearfix">
-<h1>Jaguarundis</h1>
+<h1><span class="word-swap"><span class="word-base">Jaguarundis</span><span class="word-hover">Yaguarundis</span></span></h1>
 <img src="/images/Jaguarundi%201.jpg" alt="Un jaguarundi en llibertat" class="img-left">
-<p>El jaguarundi (<i>Herpailurus yagouaroundi</i>), també conegut com a gat llúdriga, és una espècie de fèlid de mida petita a mitjana que es troba des del sud de Texas fins al centre de l'Argentina. A diferència d'altres felins del continent americà, el jaguarundi té un aspecte molt peculiar que sovint fa que es confongui amb una llúdriga o una marta. Té un cos allargat, potes curtes, un cap petit i aplanat, i unes orelles arrodonides. El seu pelatge no té taques ni ratlles en la seva etapa adulta, i es presenta en dues fases de color principals: una fase grisa fosca o negra, i una fase vermellosa o castanya. Aquesta variabilitat va fer que antigament es pensés que eren dues espècies diferents.</p>
+<p>El <span class="word-swap"><span class="word-base">jaguarundi</span><span class="word-hover">yaguarundi</span></span> (<i>Herpailurus yagouaroundi</i>), també conegut com a gat llúdriga, és una espècie de fèlid de mida petita a mitjana que es troba des del sud de Texas fins al centre de l'Argentina. A diferència d'altres felins del continent americà, el jaguarundi té un aspecte molt peculiar que sovint fa que es confongui amb una llúdriga o una marta. Té un cos allargat, potes curtes, un cap petit i aplanat, i unes orelles arrodonides. El seu pelatge no té taques ni ratlles en la seva etapa adulta, i es presenta en dues fases de color principals: una fase grisa fosca o negra, i una fase vermellosa o castanya. Aquesta variabilitat va fer que antigament es pensés que eren dues espècies diferents.</p>
 <div class="figure-right">
 <p class="figure-title">Distribució dels Jaguarundis</p>
 <img src="/images/Jaguarundi_distribution.jpg" alt="distribució dels jaguarundis" class="img-right">
@@ -318,5 +331,6 @@ yearText.innerText = new Date().getFullYear();
 </script>
 </body>
 </html>
+
 
 
