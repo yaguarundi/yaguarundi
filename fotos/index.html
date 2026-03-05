@@ -31,6 +31,13 @@ margin-bottom: 30px;
 text-transform: uppercase;
 letter-spacing: 2px;
 }
+.word-swap {
+text-decoration: underline dotted; 
+cursor: help; 
+}
+.word-hover {
+display: none; 
+}
 .navbar {
 position: static;
 top: 0;
@@ -97,6 +104,12 @@ display: inline-block;
 transition: transform 0.3s ease;
 }
 @media (hover: hover) and (pointer: fine) {
+.word-swap:hover .word-base {
+display: none; 
+}
+.word-swap:hover .word-hover {
+display: inline; 
+}
 .lk:hover {
 text-decoration: underline;
 }
@@ -220,7 +233,7 @@ menu.style.display = "flex";
 }
 </script>
 <div class="container">
-<h1>Fotos de Jaguarundis</h1>
+<h1>Fotos de <span class="word-swap"><span class="word-base">Jaguarundis</span><span class="word-hover">Yaguarundis</span></span></h1>
 <div class="photo-grid">
 <div class="photo-item">
 <a href="/images/Jaguarundi%201.jpg" target="_blank" rel="noopener noreferrer">
@@ -696,3 +709,4 @@ yearText.innerText = new Date().getFullYear();
 </script>
 </body>
 </html>
+
