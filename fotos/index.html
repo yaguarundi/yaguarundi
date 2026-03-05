@@ -33,10 +33,18 @@ letter-spacing: 2px;
 }
 .word-swap {
 text-decoration: underline dotted; 
-cursor: help; 
+cursor: pointer; 
+user-select: none;
+-webkit-user-select: none; 
 }
 .word-hover {
 display: none; 
+}
+.word-swap.tapped .word-base {
+display: none; 
+}
+.word-swap.tapped .word-hover {
+display: inline; 
 }
 .navbar {
 position: static;
@@ -104,12 +112,6 @@ display: inline-block;
 transition: transform 0.3s ease;
 }
 @media (hover: hover) and (pointer: fine) {
-.word-swap:hover .word-base {
-display: none; 
-}
-.word-swap:hover .word-hover {
-display: inline; 
-}
 .lk:hover {
 text-decoration: underline;
 }
@@ -706,7 +708,12 @@ var yearText = document.getElementById("current-year");
 if (yearText) {
 yearText.innerText = new Date().getFullYear();
 }
+var swapWords = document.querySelectorAll('.word-swap');
+swapWords.forEach(function(word) {
+word.addEventListener('click', function() {
+this.classList.toggle('tapped');
+});
+});
 </script>
 </body>
 </html>
-
