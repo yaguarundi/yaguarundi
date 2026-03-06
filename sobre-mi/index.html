@@ -31,25 +31,6 @@ margin-bottom: 30px;
 text-transform: uppercase;
 letter-spacing: 2px;
 }
-.word-swap {
-text-decoration: underline dotted;
-text-decoration-color: #E0CBB9;
-text-underline-offset: 6px;
-cursor: pointer; 
-user-select: none;
--webkit-user-select: none; 
-position: relative;
-}
-.word-swap.tapped {
-color: transparent;
-}
-.word-swap.tapped::after {
-content: attr(data-swap);
-color: #E0CBB9;
-position: absolute;
-left: 0;
-top: 0;
-}
 .navbar {
 position: static;
 top: 0;
@@ -231,7 +212,7 @@ padding: 20px 15px;
 <div class="container">
 <h1>Sobre Mi</h1>
 <div class="about-content">
-<p>Soc un equatorià-americà de <span id="my-age">28</span> anys, nascut i criat a la ciutat de Nova York. Vaig descobrir els furries per primera vegada el 2010 mentre navegava per internet, ja que m'interessaven els animals antropomòrfics, però no vaig formar part del fandom fins quinze anys després. La meva fursona i teriotip, el meu jo interior, és el <span class="word-swap">jaguarundi</span> (bé, és obvi!) perquè l'espècie em ressona – tímida, esquiva, independent – i són originaris de l'Equador. 
+<p>Soc un equatorià-americà de <span id="my-age">28</span> anys, nascut i criat a la ciutat de Nova York. Vaig descobrir els furries per primera vegada el 2010 mentre navegava per internet, ja que m'interessaven els animals antropomòrfics, però no vaig formar part del fandom fins quinze anys després. La meva fursona i teriotip, el meu jo interior, és el jaguarundi (bé, és obvi!) perquè l'espècie em ressona – tímida, esquiva, independent – i són originaris de l'Equador. 
 Tot i haver anat a l'Equador durant més de vint anys, mai n'he vist cap en persona allà. Un dels grans objectius de la meva vida és poder presenciar algun dia la seva bella i reservada manera de viure. La meva fursona es diu Yago.</p>
 <p class="figure-title">Full de Referència de la Fursona d'en Yago</p>
 <div class="image-jag-container">
@@ -286,22 +267,6 @@ ageElement.innerText = age;
 }
 }
 calculateAge();
-var swapWords = document.querySelectorAll('.word-swap');
-swapWords.forEach(function(word) {
-let text = word.innerText;
-if (text.startsWith('j')) { 
-word.setAttribute('data-swap', text.replace('j', 'y')); 
-} else if (text.startsWith('J')) { 
-word.setAttribute('data-swap', text.replace('J', 'Y')); 
-}
-});
-swapWords.forEach(function(clickedWord) {
-clickedWord.addEventListener('click', function() {
-swapWords.forEach(function(everyWord) {
-everyWord.classList.toggle('tapped');
-});
-});
-});
 </script>
 </body>
 </html>
