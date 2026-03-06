@@ -33,10 +33,22 @@ letter-spacing: 2px;
 }
 .word-swap {
 text-decoration: underline dotted;
+text-decoration-color: #E0CBB9;
 text-underline-offset: 6px;
 cursor: pointer; 
 user-select: none;
 -webkit-user-select: none; 
+position: relative;
+}
+.word-swap.tapped {
+color: transparent;
+}
+.word-swap.tapped::after {
+content: attr(data-swap);
+color: #E0CBB9;
+position: absolute;
+left: 0;
+top: 0;
 }
 .navbar {
 position: static;
@@ -275,24 +287,18 @@ ageElement.innerText = age;
 }
 calculateAge();
 var swapWords = document.querySelectorAll('.word-swap');
-swapWords.forEach(function(clickedWord) {
-clickedWord.addEventListener('click', function() {        
-swapWords.forEach(function(everyWord) {
-function safeSwap(element) {
-element.childNodes.forEach(function(node) {
-if (node.nodeType === 3) { 
-let text = node.nodeValue;
-if (text.includes('jaguarundi')) { node.nodeValue = text.replace('jaguarundi', 'yaguarundi'); }
-else if (text.includes('Jaguarundi')) { node.nodeValue = text.replace('Jaguarundi', 'Yaguarundi'); }
-else if (text.includes('yaguarundi')) { node.nodeValue = text.replace('yaguarundi', 'jaguarundi'); }
-else if (text.includes('Yaguarundi')) { node.nodeValue = text.replace('Yaguarundi', 'Jaguarundi'); }
-} 
-else if (node.nodeType === 1) { 
-safeSwap(node);
+swapWords.forEach(function(word) {
+let text = word.innerText;
+if (text.startsWith('j')) { 
+word.setAttribute('data-swap', text.replace('j', 'y')); 
+} else if (text.startsWith('J')) { 
+word.setAttribute('data-swap', text.replace('J', 'Y')); 
 }
 });
-}
-safeSwap(everyWord);          
+swapWords.forEach(function(clickedWord) {
+clickedWord.addEventListener('click', function() {
+swapWords.forEach(function(everyWord) {
+everyWord.classList.toggle('tapped');
 });
 });
 });
