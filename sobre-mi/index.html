@@ -38,15 +38,6 @@ cursor: pointer;
 user-select: none;
 -webkit-user-select: none; 
 }
-.word-hover {
-display: none; 
-}
-.word-swap.tapped .word-base {
-display: none; 
-}
-.word-swap.tapped .word-hover {
-display: inline; 
-}
 .navbar {
 position: static;
 top: 0;
@@ -228,7 +219,7 @@ padding: 20px 15px;
 <div class="container">
 <h1>Sobre Mi</h1>
 <div class="about-content">
-<p>Soc un equatorià-americà de <span id="my-age">28</span> anys, nascut i criat a la ciutat de Nova York. Vaig descobrir els furries per primera vegada el 2010 mentre navegava per internet, ja que m'interessaven els animals antropomòrfics, però no vaig formar part del fandom fins quinze anys després. La meva fursona i teriotip, el meu jo interior, és el <span class="word-swap notranslate" translate="no"><span class="word-base">jaguarundi</span><span class="word-hover">yaguarundi</span></span> (bé, és obvi!) perquè l'espècie em ressona – tímida, esquiva, independent – i són originaris de l'Equador. 
+<p>Soc un equatorià-americà de <span id="my-age">28</span> anys, nascut i criat a la ciutat de Nova York. Vaig descobrir els furries per primera vegada el 2010 mentre navegava per internet, ja que m'interessaven els animals antropomòrfics, però no vaig formar part del fandom fins quinze anys després. La meva fursona i teriotip, el meu jo interior, és el <span class="word-swap">jaguarundi</span> (bé, és obvi!) perquè l'espècie em ressona – tímida, esquiva, independent – i són originaris de l'Equador. 
 Tot i haver anat a l'Equador durant més de vint anys, mai n'he vist cap en persona allà. Un dels grans objectius de la meva vida és poder presenciar algun dia la seva bella i reservada manera de viure. La meva fursona es diu Yago.</p>
 <p class="figure-title">Full de Referència de la Fursona d'en Yago</p>
 <div class="image-jag-container">
@@ -237,7 +228,7 @@ Tot i haver anat a l'Equador durant més de vint anys, mai n'he vist cap en pers
 <img src="/images/yago-ref-sheet.PNG" alt="Full de referència">
 </picture>
 <p class="caption">
-Personatge dissenyat per <a href="https://bottleboy42e.carrd.co/">BottleBoy42</a>.
+Personatge dissenyat per <a href="https://bottleboy42e.carrd.co/" translate="no" class="notranslate">BottleBoy42</a>.
 </p>
 </div>
 <p>Tinc un trastorn mental no diagnosticat, tot i que no sé quin és exactament. M'encanten tots els animals (i les formes de vida aquí a la Terra), tot i que els gats tenen un lloc especial al meu cor. El meu número preferit, i el número de la sort, és el set (7), el meu color preferit és el vermell i el meu menjar preferit és... bé... la pizza, suposo. Els meus artistes preferits són <i>The Chemical Brothers</i>, <i>Yeah Yeah Yeahs</i>, <i>System of a Down</i> i <i>Turnstile</i>; de tant en tant també escolto house i techno.
@@ -287,8 +278,13 @@ var swapWords = document.querySelectorAll('.word-swap');
 swapWords.forEach(function(clickedWord) {
 clickedWord.addEventListener('click', function() {
 swapWords.forEach(function(everyWord) {
-everyWord.classList.toggle('tapped');
-});      
+let text = everyWord.innerText;
+if (text.includes('j') || text.includes('J')) {
+everyWord.innerText = text.replace('j', 'y').replace('J', 'Y');
+} else {
+everyWord.innerText = text.replace('y', 'j').replace('Y', 'J');
+}
+});
 });
 });
 </script>
