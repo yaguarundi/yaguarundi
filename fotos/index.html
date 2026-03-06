@@ -33,10 +33,22 @@ letter-spacing: 2px;
 }
 .word-swap {
 text-decoration: underline dotted;
+text-decoration-color: #E0CBB9;
 text-underline-offset: 6px;
 cursor: pointer; 
 user-select: none;
 -webkit-user-select: none; 
+position: relative;
+}
+.word-swap.tapped {
+color: transparent;
+}
+.word-swap.tapped::after {
+content: attr(data-swap);
+color: #E0CBB9;
+position: absolute;
+left: 0;
+top: 0;
 }
 .navbar {
 position: static;
@@ -701,22 +713,22 @@ if (yearText) {
 yearText.innerText = new Date().getFullYear();
 }
 var swapWords = document.querySelectorAll('.word-swap');
-swapWords.forEach(function(clickedWord) {
-clickedWord.addEventListener('click', function() {        
-swapWords.forEach(function(everyWord) {
-let text = everyWord.innerText;
-if (text.startsWith('j')) {
-everyWord.innerText = text.replace('j', 'y');
-} else if (text.startsWith('J')) {
-everyWord.innerText = text.replace('J', 'Y');
-} else if (text.startsWith('y')) {
-everyWord.innerText = text.replace('y', 'j');
-} else if (text.startsWith('Y')) {
-everyWord.innerText = text.replace('Y', 'J');
+swapWords.forEach(function(word) {
+let text = word.innerText;
+if (text.startsWith('j')) { 
+word.setAttribute('data-swap', text.replace('j', 'y')); 
+} else if (text.startsWith('J')) { 
+word.setAttribute('data-swap', text.replace('J', 'Y')); 
 }
+});
+swapWords.forEach(function(clickedWord) {
+clickedWord.addEventListener('click', function() {
+swapWords.forEach(function(everyWord) {
+everyWord.classList.toggle('tapped');
 });
 });
 });
 </script>
 </body>
 </html>
+
