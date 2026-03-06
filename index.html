@@ -324,14 +324,23 @@ yearText.innerText = new Date().getFullYear();
 }
 var swapWords = document.querySelectorAll('.word-swap');
 swapWords.forEach(function(clickedWord) {
-clickedWord.addEventListener('click', function() {
+clickedWord.addEventListener('click', function() {        
 swapWords.forEach(function(everyWord) {
-let text = everyWord.innerText;
-if (text.includes('j') || text.includes('J')) {
-everyWord.innerText = text.replace('j', 'y').replace('J', 'Y');
-} else {
-everyWord.innerText = text.replace('y', 'j').replace('Y', 'J');
+function safeSwap(element) {
+element.childNodes.forEach(function(node) {
+if (node.nodeType === 3) { 
+let text = node.nodeValue;
+if (text.includes('jaguarundi')) { node.nodeValue = text.replace('jaguarundi', 'yaguarundi'); }
+else if (text.includes('Jaguarundi')) { node.nodeValue = text.replace('Jaguarundi', 'Yaguarundi'); }
+else if (text.includes('yaguarundi')) { node.nodeValue = text.replace('yaguarundi', 'jaguarundi'); }
+else if (text.includes('Yaguarundi')) { node.nodeValue = text.replace('Yaguarundi', 'Jaguarundi'); }
+} 
+else if (node.nodeType === 1) { 
+safeSwap(node);
 }
+});
+}
+safeSwap(everyWord);          
 });
 });
 });
