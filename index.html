@@ -360,6 +360,11 @@ var yearText = document.getElementById("current-year");
 if (yearText) {
 yearText.innerText = new Date().getFullYear();
 }
+document.addEventListener('click', function(event) {
+if (!event.target.matches('.mobile-tooltip')) {
+document.activeElement.blur();
+}
+});
 var swapWords = document.querySelectorAll('.word-swap');
 swapWords.forEach(function(clickedWord) {
 clickedWord.addEventListener('click', function() {
