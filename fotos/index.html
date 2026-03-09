@@ -32,6 +32,13 @@ margin-top: 0;
 margin-bottom: 40px;
 letter-spacing: 2px;
 }
+.word-swap {
+text-decoration: underline dotted;
+text-underline-offset: 6px;
+cursor: pointer; 
+user-select: none;
+-webkit-user-select: none; 
+}
 .navbar {
 position: static;
 top: 0;
@@ -220,7 +227,7 @@ menu.style.display = "flex";
 }
 </script>
 <div class="container">
-<h1>Fotos de Jaguarundis</h1>
+<h1>Fotos de <span class="word-swap notranslate" translate="no">Jaguarundis</span></h1>
 <div class="photo-grid">
 <div class="photo-item">
 <a href="/images/Jaguarundi%201.jpg" target="_blank" rel="noopener noreferrer">
@@ -693,6 +700,18 @@ var yearText = document.getElementById("current-year");
 if (yearText) {
 yearText.innerText = new Date().getFullYear();
 }
+var swapWords = document.querySelectorAll('.word-swap');
+swapWords.forEach(function(clickedWord) {
+clickedWord.addEventListener('click', function() {
+swapWords.forEach(function(everyWord) {
+let text = everyWord.innerText;
+if (text.startsWith('j')) { everyWord.innerText = text.replace('j', 'y'); }
+else if (text.startsWith('J')) { everyWord.innerText = text.replace('J', 'Y'); }
+else if (text.startsWith('y')) { everyWord.innerText = text.replace('y', 'j'); }
+else if (text.startsWith('Y')) { everyWord.innerText = text.replace('Y', 'J'); }
+});
+});
+});
 </script>
 </body>
 </html>
