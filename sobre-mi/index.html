@@ -142,6 +142,48 @@ margin-top: 15px;
 margin-bottom: 0;
 text-align: center;
 }
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+.mySlides {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #E0CBB9;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(58, 36, 20, 0.7); /* Dark brown with transparency */
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+    .prev:hover, .next:hover {
+        background-color: #634E34;
+    }
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
 @media (hover: hover) and (pointer: fine) {
 .lk:hover {
 text-decoration: underline;
@@ -221,8 +263,9 @@ padding: 20px 15px;
 <div class="about-content">
 <p>Soc un novaiorquès de <span id="my-age">28</span> anys d'ascendència equatoriana. Vaig descobrir els furries per primera vegada el 2010 mentre navegava per internet, ja que m'interessaven els animals antropomòrfics, però no vaig formar part del fandom fins quinze anys després. La meva fursona i teriotip, el meu jo interior, és el jaguarundi (bé, és obvi!) perquè l'espècie em ressona – tímida, esquiva, independent – i són originaris de l'Equador. 
 Tot i haver anat a l'Equador durant més de vint anys, mai n'he vist cap en persona allà. Un dels grans objectius de la meva vida és poder presenciar algun dia la seva bella i reservada manera de viure.</p>
+<div class="image-jag-container slideshow-container">
+<div class="mySlides fade">
 <p class="figure-title">Full de Referència de la Fursona d'en&nbsp;<span class="notranslate" translate="no">Yago</span></p>
-<div class="image-jag-container">
 <picture>
 <source srcset="/images/yago-ref-sheet.webp" type="image/webp">
 <img src="/images/yago-ref-sheet.PNG" alt="Full de referència">
@@ -230,6 +273,8 @@ Tot i haver anat a l'Equador durant més de vint anys, mai n'he vist cap en pers
 <p class="caption">
 Personatge dissenyat per&nbsp;<a href="https://bottleboy42e.carrd.co/" translate="no" class="notranslate" target="_blank">© BottleBoy42</a>.
 </p>
+</div>
+<div class="mySlides fade">
 <p class="figure-title">Sticker d’en&nbsp;<span class="notranslate" translate="no">Yago</span></p>
 <picture>
 <source srcset="/images/Yago-sticker.png" type="image/png">
@@ -238,6 +283,9 @@ Personatge dissenyat per&nbsp;<a href="https://bottleboy42e.carrd.co/" translate
 <p class="caption">
 Sticker dissenyat per&nbsp;<a href="https://willfragment.carrd.co/" translate="no" class="notranslate" target="_blank">© willfragment</a>.
 </p>
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 <p>Tinc un trastorn mental no diagnosticat, tot i que no sé quin és exactament. M'encanten tots els animals (i les formes de vida aquí a la Terra), tot i que els gats tenen un lloc especial al meu cor. El meu número preferit, i el número de la sort, és el set (7), el meu color preferit és el vermell i el meu menjar preferit és... bé... la pizza, suposo. Els meus artistes preferits són <i>The Chemical Brothers</i>, <i>Yeah Yeah Yeahs</i>, <i>System of a Down</i> i <i>Turnstile</i>; de tant en tant també escolto house i techno.
 Pel que fa a la televisió, les meves sèries preferides són <i>Prison Break</i>, <i>La Casa de Papel</i>, <i>Breaking Bad</i>, <i>Better Call Saul</i>, <i>Wentworth</i>, <i>Lost</i> i la franquícia de <i>l'Arrowverse</i>. Tinc massa pel·lícules preferides per poder fer-ne una llista.</p>
@@ -294,6 +342,21 @@ else if (text.startsWith('Y')) { everyWord.innerText = text.replace('Y', 'J'); }
 });
 });
 });
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+if (n > slides.length) { slideIndex = 1 }
+if (n < 1) { slideIndex = slides.length }
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+slides[slideIndex - 1].style.display = "block";
+}
 </script>
 </body>
 </html>
