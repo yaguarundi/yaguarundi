@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?yaguarundi\.cat [NC]
+RewriteRule "Jaguarundi 7[0-9]\.jpeg$" - [F,NC]
